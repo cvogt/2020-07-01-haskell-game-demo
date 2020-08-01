@@ -1,0 +1,55 @@
+SVG support
+-- https://svg-clipart.com/svg/symbol/mKBXkcQ-flame-vector.svg
+-- https://hackage.haskell.org/package/rasterific-svg-0.3.3.2/docs/Graphics-Rasterific-Svg.html
+----------
+Vector libs to check out
+https://hackage.haskell.org/package/fixed-vector-1.2.0.0
+https://hackage.haskell.org/package/linear-1.21.1
+https://www.stackage.org/haddock/lts-16.6/apecs-physics-0.4.4/index.html
+----------
+Game engines to check out
+https://aas.sh/blog/making-a-game-with-haskell-and-apecs/
+--------
+TODO brainstorming:
+
+1. milestone:
+
+coordinate system
+- graceful operation when resizing the window / full screen. I.e. scaling the pixel
+- modular coordinate system, where something consisting of multiple thing can exist rotated within another (e.g. a spaceship rotated inside of a non rotated grid representing space)
+- pathfinding
+- collision detection during movement when walking around
+- onclick events (also with overlapping assets)
+- some sort of menu
+
+2. milestone
+- take individual images from files containing multiple images
+- take animations from image files containing the individual images
+- how to handle multi coodinate visual effects
+
+
+
+
+CREATTIVE IDEAS:
+generted music:
+- auto-generate music and make user optionally involved in creative process
+- craft building blocks affecting music or use minerals
+- correlate what happens in the music with what happens in the game, e.g. danger
+- have music related rooms, e.g. a mixing or synth room.
+- have disco-lighting for the space ship
+
+usefulness of stuff:
+- maybe not fly spaceship directly but put it on course and then have to pass the time until arrival
+- pass time until arrival in bed / cryopod / playing with the music / doing other stuff on board. NO MINIGAMES unless super cool.
+
+main character:
+- humantiy has dies, main character is a robot but with personality, has to find out what happened, find blueprints for new chips and modules as game progresses, maybe some related to music or speech synthesis
+
+spaceship building:
+- need air and have a hull integrity system similar to subnautica leading to intersting designs and danger
+
+planet art style:
+- maybe planets are actually 3d spheres of 2d tiles you can look at as you approach and when you get close enough to walk it is so large it's just a plane
+
+titles:
+- musicminer, musebot, museminer, left in space (wakes up as emergency repair bot after incident)

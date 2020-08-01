@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -eu
+set -o pipefail
+
+ORMOLU=$(stack build --exec 'which ormolu')
+
+find . -type f -name "*.hs" ! -path '*/dist-newstyle/*' ! -path '*/.stack-work*/*' -print0 | \
+    xargs -0 -n 1 -P 8 "$ORMOLU" -o -XTypeApplications -o -XBangPatterns -o -XPatternSynonyms -m inplace

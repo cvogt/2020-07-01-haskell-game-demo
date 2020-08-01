@@ -1,0 +1,137 @@
+name:                playtime
+version:             0.1.0.0
+github:              "githubuser/playtime"
+author:              "Chris Vogt"
+maintainer:          ""
+copyright:           "2020 Chris Vogt"
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at ...
+
+dependencies:
+# - ansi-terminal
+- aeson
+- base
+- bmp
+- bytestring
+- containers
+- deepseq
+- file-embed
+- filepath
+- integer-gmp
+- mtl
+- protolude
+- random
+- safe
+- sdl2-mixer
+- tar
+- text
+- time
+- unix
+- unordered-containers
+- vector
+
+# for debug
+- ansi-terminal
+- terminal-size
+
+# for live code feature
+- ghc
+- ghc-paths
+- ghc-boot-th
+- fsnotify
+- silently
+
+# extra
+- extra
+- monad-extras
+- monad-loops
+- universum
+
+# formatting
+- ormolu
+
+# opengl and friends
+- OpenGL
+- JuicyPixels
+- GLFW-b
+
+# maybe game dev relevant
+- pathfinding
+
+# music generation
+- Euterpea
+
+default-extensions:
+- DeriveAnyClass
+- DeriveDataTypeable
+- DeriveFunctor
+- DeriveGeneric
+- DerivingStrategies
+- FlexibleContexts
+- FlexibleInstances
+- GeneralizedNewtypeDeriving # FIXME: Safe Haskell considers GeneralizedNewtypeDeriving unsafe
+- LambdaCase
+- MultiParamTypeClasses
+- MultiWayIf
+- NamedFieldPuns
+- NoImplicitPrelude
+- OverloadedStrings
+- PackageImports
+- RecordWildCards
+- ScopedTypeVariables
+- StandaloneDeriving
+- TupleSections
+- TypeApplications
+- TypeOperators
+- ViewPatterns
+# FIXME: Safe Haskell considers TemplateHaskell unsafe, maybe at least use manual PRAGMA or use cwd instead of FileEmbed?
+
+library:
+  source-dirs: lib
+
+ghc-options:
+  -O0 -j -Weverything -Werror
+  -Wno-missing-export-lists
+  -Wno-missing-import-lists
+  -Wno-missing-local-signatures
+  -Wno-safe
+  -Wno-unsafe
+  -Wno-missing-deriving-strategies
+  -Wno-monomorphism-restriction
+  # -optP-Wno-nonportable-include-path
+
+executables:
+  spaceminer:
+    main: Main.hs
+    source-dirs: spaceminer
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+    dependencies: playtime
+  platformer:
+    main: Main.hs
+    source-dirs: platformer
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+    dependencies: playtime
+  shoot-em-up:
+    main: Main.hs
+    source-dirs: shoot-em-up
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+    dependencies: playtime
+  live-coding-demo:
+    main: Main.hs
+    source-dirs: live-coding-demo
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+    dependencies: playtime
+
+tests:
+  playtime-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+    dependencies: playtime
