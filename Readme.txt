@@ -1,3 +1,5 @@
+Note: there may be external dependencies you need to install in your OS, such as sdl, sdl2, sdl2_mixer
+
 This is an amateur project exploring how convenient game development in Haskell can be.
 
 A lot of the code is work in progress.
