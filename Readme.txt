@@ -9,6 +9,8 @@ Demo game: https://www.youtube.com/watch?v=KndOBmmuDQg
 Started in June 2020 drawing inspiration from
 https://www.youtube.com/watch?v=1MNTerD8IuI - "Writing a game in Haskell" by Elise Huard
 
+Note: there may be external dependencies you need to install in your OS, such as sdl, sdl2, sdl2_mixer
+
 Currently, this project is broken up into a shared engine named "Playtime" and
 several executable demos.
 
